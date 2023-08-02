@@ -1,0 +1,18 @@
+cd /home/coder/project/workspace/productservice/
+mvn clean package -DskipTests
+java -jar /home/coder/project/workspace/productservice/target/productservice-0.0.1-SNAPSHOT.jar --server.port=9000
+java -jar /home/coder/project/workspace/productservice/target/productservice-0.0.1-SNAPSHOT.jar --server.port=9001
+
+cd /home/coder/project/workspace/cartservice/
+mvn clean package -DskipTests
+java -jar /home/coder/project/workspace/cartservice/target/cartservice-0.0.1-SNAPSHOT.jar --server.port=7000
+java -jar /home/coder/project/workspace/cartservice/target/cartservice-0.0.1-SNAPSHOT.jar --server.port=7001
+
+cd /home/coder/project/workspace/discovery-server/
+mvn clean package -DskipTests
+java -jar /home/coder/project/workspace/discovery-server/target/discovery-server-0.0.1-SNAPSHOT.jar --server.port=8080
+
+cd /home/coder/project/workspace/apigateway/
+mvn clean package -DskipTests
+java -jar /home/coder/project/workspace/apigateway/target/apigateway-0.0.1-SNAPSHOT.jar --server.port=8081
+
